@@ -2,6 +2,11 @@
 
 这个目录是**纯数据**，不依赖任何服务端代码，可以单独作为一个 git 仓库 / 静态资源目录托管。
 
+> 已发布：**https://github.com/happysoysaucemin/quiz-dx-bank**（文件在仓库根目录）
+> - jsDelivr：`https://cdn.jsdelivr.net/gh/happysoysaucemin/quiz-dx-bank@main/`
+> - raw：`https://raw.githubusercontent.com/happysoysaucemin/quiz-dx-bank/main/`
+> - 用法：把这些地址（含结尾 `/`）填到 `web/js/config.js` 的 `bankBase`。
+
 ```
 bank/
 ├─ index.json    # 科目索引、题量、生成时间
@@ -110,22 +115,33 @@ site/
 
 ### 2. 单独一个仓库 / GitHub Pages
 
+已发布的题库仓库（文件直接放在仓库根目录）：
+
+```js
+bankBase: 'https://cdn.jsdelivr.net/gh/happysoysaucemin/quiz-dx-bank@main/',
+```
+
+自己重新发布时，把 `bank/` 里的文件推到新仓库根目录即可；如果题库放在大仓库的子目录里（如 `bank/`），地址记得带上子目录：
+
 ```bash
 cd 刷题器
 git subtree push --prefix bank origin gh-pages   # 或单独建仓库
 ```
 
-然后：
-
 ```js
-bankBase: 'https://<user>.github.io/<repo>/',
+bankBase: 'https://<user>.github.io/<repo>/bank/',   // 子目录时带 /bank/
 ```
 
 ### 3. jsDelivr（带 CDN 缓存）
 
 ```js
+// 题库在仓库根目录
+bankBase: 'https://cdn.jsdelivr.net/gh/<user>/<repo>@main/',
+// 题库在仓库的 bank/ 子目录
 bankBase: 'https://cdn.jsdelivr.net/gh/<user>/<repo>@main/bank/',
 ```
+
+> 首次请求会回源，之后由 CDN 缓存；`@main` 可以换成 tag / commit 固定版本。
 
 > `bankBase` 必须以 `/` 结尾，并且目录里要有 `index.json`。
 > 前端会依次尝试 `./bank/`、`../bank/`、`/bank/` 三个同一来源的路径，最后才用配置里的地址。
