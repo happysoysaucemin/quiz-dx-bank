@@ -1,0 +1,2003 @@
+{
+ "code": "13014",
+ "name": "高级语言程序设计（实践）",
+ "short": "高级语言",
+ "file": "13014.json",
+ "counts": {
+  "fill": 15,
+  "single": 58,
+  "judge": 10
+ },
+ "total": 83,
+ "questions": [
+  {
+   "id": "13014-fill-1",
+   "no": 1,
+   "type": "fill",
+   "stem": "一个 C 源程序中至少应包括一个______________________________函数。",
+   "blanks": 1,
+   "answer": "main",
+   "accept": [
+    [
+     "main"
+    ]
+   ],
+   "explain": "C 程序以 main 为唯一入口，程序运行从 main 的第一条可执行语句开始。\n",
+   "answerText": "main",
+   "order": 1
+  },
+  {
+   "id": "13014-fill-2",
+   "no": 2,
+   "type": "fill",
+   "stem": "结构化程序设计所规定的三种基本控制结构是______________________________、______________________________和______________________________。",
+   "blanks": 3,
+   "answer": "顺序结构、选择结构、循环结构",
+   "accept": [
+    [
+     "顺序结构"
+    ],
+    [
+     "选择结构"
+    ],
+    [
+     "循环结构"
+    ]
+   ],
+   "explain": "任何算法都可由这三种结构组合而成，且每种结构只有一个入口、一个出口。\n",
+   "answerText": "顺序结构、选择结构、循环结构",
+   "order": 2
+  },
+  {
+   "id": "13014-fill-3",
+   "no": 3,
+   "type": "fill",
+   "stem": "下列程序段的输出结果是______________________________。int i=19, j; j=i%4; printf(\"%d\", j);",
+   "blanks": 1,
+   "answer": "3",
+   "accept": [
+    [
+     "3"
+    ]
+   ],
+   "explain": "19%4 的余数为 3（整数取余，结果符号随被除数）。\n",
+   "answerText": "3",
+   "order": 3
+  },
+  {
+   "id": "13014-fill-4",
+   "no": 4,
+   "type": "fill",
+   "stem": "若已知 a=10, b=20, 则表达式 !a<b 的值是______________________________。",
+   "blanks": 1,
+   "answer": "1",
+   "accept": [
+    [
+     "1"
+    ]
+   ],
+   "explain": "!a 先算，a=10 为真故 !a=0；再算 0<20，结果为真，C 中以 1 表示。\n",
+   "note": "答案错误｜原答案给 0。!a=0、0<20 为真，结果应为 1。订正：答案改为 1。",
+   "answerText": "1",
+   "order": 4
+  },
+  {
+   "id": "13014-fill-5",
+   "no": 5,
+   "type": "fill",
+   "stem": "设 x 和 y 均为 int 型变量，且 x=1, y=2，则表达式 3+x/y 的值为______________________________。",
+   "blanks": 1,
+   "answer": "3",
+   "accept": [
+    [
+     "3"
+    ]
+   ],
+   "explain": "x/y 为整数除法，1/2=0，故 3+0=3。\n",
+   "answerText": "3",
+   "order": 5
+  },
+  {
+   "id": "13014-fill-6",
+   "no": 6,
+   "type": "fill",
+   "stem": "若有定义 int a[]={2,4,6,8,10,12}, *p=a; 则 *(p+1) 的值是______________________________。",
+   "blanks": 1,
+   "answer": "4",
+   "accept": [
+    [
+     "4"
+    ]
+   ],
+   "explain": "p 指向 a[0]，p+1 指向 a[1]，解引用得 4。\n",
+   "answerText": "4",
+   "order": 6
+  },
+  {
+   "id": "13014-fill-7",
+   "no": 7,
+   "type": "fill",
+   "stem": "在访问一个结构元素前，你必须定义______________________________。",
+   "blanks": 1,
+   "answer": "结构变量（结构体变量）",
+   "accept": [
+    [
+     "结构变量（结构体变量）",
+     "结构体变量",
+     "结构变量"
+    ]
+   ],
+   "explain": "先定义 struct 类型，再用该类型定义结构变量，才能用“.”访问其成员。\n",
+   "answerText": "结构变量（结构体变量）",
+   "order": 7
+  },
+  {
+   "id": "13014-fill-8",
+   "no": 8,
+   "type": "fill",
+   "stem": "二维数组有______________________________个下标，分别用一对中括号括起。",
+   "blanks": 1,
+   "answer": "两（2）",
+   "accept": [
+    [
+     "两（2）",
+     "2",
+     "两"
+    ]
+   ],
+   "explain": "二维数组按“行、列”两个下标定位元素，如 a[i][j]。\n",
+   "answerText": "两（2）",
+   "order": 8
+  },
+  {
+   "id": "13014-fill-9",
+   "no": 9,
+   "type": "fill",
+   "stem": "下述语句执行后，int k=1; while (k++<10); 变量 k 的值是______________________________。",
+   "blanks": 1,
+   "answer": "11",
+   "accept": [
+    [
+     "11"
+    ]
+   ],
+   "explain": "k=9 时判断 9<10 为真、k 变为 10；k=10 时判断 10<10 为假、k 仍自增为 11。\n",
+   "answerText": "11",
+   "order": 9
+  },
+  {
+   "id": "13014-fill-10",
+   "no": 10,
+   "type": "fill",
+   "stem": "若 a 是 int 型变量，且 a 的初值为 6，则计算表达式 a+=a-=a*a 后，a 的值为______________________________。",
+   "blanks": 1,
+   "answer": "-60",
+   "accept": [
+    [
+     "-60"
+    ]
+   ],
+   "explain": "从右向左：a*a=36；a-=36 使 a=-30；a+=(-30) 使 a=-60。（严格说在同一表达式内两次修改 a 属未定义行为，考试按教材的右结合求值顺序作答，gcc 实测亦为 -60。）\n",
+   "answerText": "-60",
+   "order": 10
+  },
+  {
+   "id": "13014-fill-11",
+   "no": 11,
+   "type": "fill",
+   "stem": "若有定义 int a[3][4]={{1,2},{0},{4,6,8,10}}; 则初始化后，a[1][2] 得到的初值是______________________________。",
+   "blanks": 1,
+   "answer": "0",
+   "accept": [
+    [
+     "0"
+    ]
+   ],
+   "explain": "第二行只初始化了 a[1][0]=0，其余元素由编译器自动补 0，故 a[1][2]=0。\n",
+   "note": "答案错误｜原答案给“0、6”，但题目只问 a[1][2]，该元素未显式初始化，值为 0；“6”是 a[2][1] 的值。订正：答案改为 0。",
+   "answerText": "0",
+   "order": 11
+  },
+  {
+   "id": "13014-fill-12",
+   "no": 12,
+   "type": "fill",
+   "stem": "若 x=2, y=-3 则 x&&y 的结果是______________________________。",
+   "blanks": 1,
+   "answer": "1",
+   "accept": [
+    [
+     "1"
+    ]
+   ],
+   "explain": "逻辑与只关心真假，2 与 -3 均为非 0（真），故结果为 1。\n",
+   "answerText": "1",
+   "order": 12
+  },
+  {
+   "id": "13014-fill-13",
+   "no": 13,
+   "type": "fill",
+   "stem": "与二进制数 101 等值的十进制数为______________________________。",
+   "blanks": 1,
+   "answer": "5",
+   "accept": [
+    [
+     "5"
+    ]
+   ],
+   "explain": "1×2²+0×2¹+1×2⁰=5。\n",
+   "answerText": "5",
+   "order": 13
+  },
+  {
+   "id": "13014-fill-14",
+   "no": 14,
+   "type": "fill",
+   "stem": "定义 int i=1; 执行语句 while(i++<5); 后，i 的值为______________________________。",
+   "blanks": 1,
+   "answer": "6",
+   "accept": [
+    [
+     "6"
+    ]
+   ],
+   "explain": "i=4 时判断为真、i 变 5；i=5 时判断 5<5 为假、i 仍自增至 6。\n",
+   "answerText": "6",
+   "order": 14
+  },
+  {
+   "id": "13014-fill-15",
+   "no": 15,
+   "type": "fill",
+   "stem": "若有定义 double x[3][5]; 则 x 数组中行下标的下限为______________________________，列下标的下限为______________________________。",
+   "blanks": 2,
+   "answer": "0、0",
+   "accept": [
+    [
+     "0"
+    ],
+    [
+     "0"
+    ]
+   ],
+   "explain": "C 数组下标一律从 0 开始，行下标 0～2、列下标 0～4。\n",
+   "note": "答案错误｜原答案给“2、4”，那是下标的上限而非下限。订正：答案改为 0、0。",
+   "answerText": "0、0",
+   "order": 15
+  },
+  {
+   "id": "13014-single-1",
+   "no": 1,
+   "type": "single",
+   "stem": "C 语言规定：在一个源程序中，main 函数的位置（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "必须在最开始"
+    },
+    {
+     "key": "B",
+     "text": "必须在系统调用的库函数的后面"
+    },
+    {
+     "key": "C",
+     "text": "可以任意"
+    },
+    {
+     "key": "D",
+     "text": "必须在最后"
+    }
+   ],
+   "answer": "C",
+   "explain": "main 的位置不影响程序执行，执行总是从 main 开始；但被调函数须先声明或定义。\n",
+   "answerText": "C",
+   "order": 16
+  },
+  {
+   "id": "13014-single-2",
+   "no": 2,
+   "type": "single",
+   "stem": "C 语言中，用户能使用的合法标识符是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "a_b!"
+    },
+    {
+     "key": "B",
+     "text": "-xyz"
+    },
+    {
+     "key": "C",
+     "text": "fa2"
+    },
+    {
+     "key": "D",
+     "text": "5i"
+    }
+   ],
+   "answer": "C",
+   "explain": "标识符由字母、数字、下划线组成且不能以数字开头，故只有 fa2 合法。\n",
+   "answerText": "C",
+   "order": 17
+  },
+  {
+   "id": "13014-single-3",
+   "no": 3,
+   "type": "single",
+   "stem": "若定义 int i; 则以下循环语句的循环执行次数是（ ）。for(i=2; i>0;) printf(\"%d\", i--);",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 次"
+    },
+    {
+     "key": "B",
+     "text": "无限次"
+    },
+    {
+     "key": "C",
+     "text": "0 次"
+    },
+    {
+     "key": "D",
+     "text": "1 次"
+    }
+   ],
+   "answer": "A",
+   "explain": "i 依次为 2、1 输出后自减，到 0 时条件不成立，共执行 2 次。\n",
+   "answerText": "A",
+   "order": 18
+  },
+  {
+   "id": "13014-single-4",
+   "no": 4,
+   "type": "single",
+   "stem": "在循环语句的循环体中，continue 语句的作用是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "立即终止整个循环"
+    },
+    {
+     "key": "B",
+     "text": "继续执行 continue 语句之后的循环体"
+    },
+    {
+     "key": "C",
+     "text": "结束本次循环"
+    },
+    {
+     "key": "D",
+     "text": "结束本次循环并跳出循环"
+    }
+   ],
+   "answer": "C",
+   "explain": "continue 跳过本次循环剩余语句、进入下一次条件判断；break 才跳出整个循环。\n",
+   "answerText": "C",
+   "order": 19
+  },
+  {
+   "id": "13014-single-5",
+   "no": 5,
+   "type": "single",
+   "stem": "以下对 C 语言中字符数组的错误描述是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "字符数组可以存放字符串"
+    },
+    {
+     "key": "B",
+     "text": "字符数组中的字符串可以整个输入、输出"
+    },
+    {
+     "key": "C",
+     "text": "在赋值语句中通过赋值运算符=对字符数组整体赋值"
+    },
+    {
+     "key": "D",
+     "text": "字符数组中字符串的结束标志是'\\0'"
+    }
+   ],
+   "answer": "C",
+   "explain": "数组名是常量地址，不能用 = 整体赋值，只能用 strcpy 或初始化。\n",
+   "answerText": "C",
+   "order": 20
+  },
+  {
+   "id": "13014-single-6",
+   "no": 6,
+   "type": "single",
+   "stem": "下面不正确的字符串常量是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "'abc'"
+    },
+    {
+     "key": "B",
+     "text": "\"12'12\""
+    },
+    {
+     "key": "C",
+     "text": "\"0\""
+    },
+    {
+     "key": "D",
+     "text": "\" \""
+    }
+   ],
+   "answer": "A",
+   "explain": "单引号只能界定单个字符常量，'abc' 既非字符也非字符串。\n",
+   "answerText": "A",
+   "order": 21
+  },
+  {
+   "id": "13014-single-7",
+   "no": 7,
+   "type": "single",
+   "stem": "以下正确的叙述是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "在 C 程序中，每行中只能写一条语句"
+    },
+    {
+     "key": "B",
+     "text": "若 a 是实型变量，C 程序中允许赋值 a=10，因此实型变量中允许存放整型数"
+    },
+    {
+     "key": "C",
+     "text": "在 C 程序中，无论是整数还是实数，都能被准确无误地表示"
+    },
+    {
+     "key": "D",
+     "text": "在 C 程序中，%是只能用于整数运算的运算符"
+    }
+   ],
+   "answer": "D",
+   "explain": "% 的运算对象必须是整型；A 一行可写多条语句；B 是把“类型转换”误作“存储整型”；C 浮点数存在精度误差。\n",
+   "answerText": "D",
+   "order": 22
+  },
+  {
+   "id": "13014-single-8",
+   "no": 8,
+   "type": "single",
+   "stem": "sizeof(float) 是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "一个双精度型表达式"
+    },
+    {
+     "key": "B",
+     "text": "一个整型表达式"
+    },
+    {
+     "key": "C",
+     "text": "一种函数调用"
+    },
+    {
+     "key": "D",
+     "text": "一个不合法的表达式"
+    }
+   ],
+   "answer": "B",
+   "explain": "sizeof 是运算符，结果为 size_t（无符号整型），故是整型表达式。\n",
+   "answerText": "B",
+   "order": 23
+  },
+  {
+   "id": "13014-single-9",
+   "no": 9,
+   "type": "single",
+   "stem": "下列标识符中，不能用作变量名的是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "_1234_"
+    },
+    {
+     "key": "B",
+     "text": "_1_2"
+    },
+    {
+     "key": "C",
+     "text": "int_2_"
+    },
+    {
+     "key": "D",
+     "text": "2_int_"
+    }
+   ],
+   "answer": "D",
+   "explain": "标识符不能以数字开头，2_int_ 非法；int_2_ 虽含 int 但整体不是关键字，合法。\n",
+   "answerText": "D",
+   "order": 24
+  },
+  {
+   "id": "13014-single-10",
+   "no": 10,
+   "type": "single",
+   "stem": "若有说明：int a[3]={0}; 则下面正确的叙述是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "只有元素 a[0] 可得到初值 0"
+    },
+    {
+     "key": "B",
+     "text": "此说明语句不正确"
+    },
+    {
+     "key": "C",
+     "text": "数组 a 中各元素都可得到初值，但其值不一定为 0"
+    },
+    {
+     "key": "D",
+     "text": "数组 a 中每个元素均可得到初值 0"
+    }
+   ],
+   "answer": "D",
+   "explain": "部分初始化时，未列出的元素自动补 0，故三个元素全为 0。\n",
+   "answerText": "D",
+   "order": 25
+  },
+  {
+   "id": "13014-single-11",
+   "no": 11,
+   "type": "single",
+   "stem": "以下哪种变量类型在 C 语言中不存在（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "整型变量"
+    },
+    {
+     "key": "B",
+     "text": "实型变量"
+    },
+    {
+     "key": "C",
+     "text": "字符串变量"
+    },
+    {
+     "key": "D",
+     "text": "字符变量"
+    }
+   ],
+   "answer": "C",
+   "explain": "C 用字符数组表示字符串，没有独立的“字符串变量”类型（C++ 的 string 属类类型）。\n",
+   "answerText": "C",
+   "order": 26
+  },
+  {
+   "id": "13014-single-12",
+   "no": 12,
+   "type": "single",
+   "stem": "以下程序段中 while 语句的循环次数是（ ）。int i=0; while (i=1) {i++; }",
+   "options": [
+    {
+     "key": "A",
+     "text": "无限次"
+    },
+    {
+     "key": "B",
+     "text": "有语法错误，不能执行"
+    },
+    {
+     "key": "C",
+     "text": "一次也不执行"
+    },
+    {
+     "key": "D",
+     "text": "执行一次"
+    }
+   ],
+   "answer": "A",
+   "explain": "i=1 是赋值表达式，值恒为 1（真），故死循环；若写 i==1 则执行一次。\n",
+   "answerText": "A",
+   "order": 27
+  },
+  {
+   "id": "13014-single-13",
+   "no": 13,
+   "type": "single",
+   "stem": "以下正确的描述是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "函数的定义可以嵌套，但函数的调用不可以嵌套"
+    },
+    {
+     "key": "B",
+     "text": "函数的定义不可以嵌套，但函数的调用可以嵌套"
+    },
+    {
+     "key": "C",
+     "text": "函数的定义和函数的调用均不可以嵌套"
+    },
+    {
+     "key": "D",
+     "text": "函数的定义和函数的调用均可以嵌套"
+    }
+   ],
+   "answer": "B",
+   "explain": "C 不允许在函数内部定义函数，但允许函数相互调用（含递归）。\n",
+   "answerText": "B",
+   "order": 28
+  },
+  {
+   "id": "13014-single-14",
+   "no": 14,
+   "type": "single",
+   "stem": "若有定义 double a[]={2,1,3,6,9,5}; double b=6.0; 则下列错误的赋值语句是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "b=a[2];"
+    },
+    {
+     "key": "B",
+     "text": "b=a+a[2];"
+    },
+    {
+     "key": "C",
+     "text": "a[1]=b;"
+    },
+    {
+     "key": "D",
+     "text": "b=a[0]+7;"
+    }
+   ],
+   "answer": "B",
+   "explain": "a 是数组名（地址常量），a+a[2] 是“地址＋数值”，不能赋给 double 变量。\n",
+   "answerText": "B",
+   "order": 29
+  },
+  {
+   "id": "13014-single-15",
+   "no": 15,
+   "type": "single",
+   "stem": "下列程序段，则下面描述中正确的是（ ）。int k=2; while(k=0){printf(\"%d\",k);k--;}",
+   "options": [
+    {
+     "key": "A",
+     "text": "while 循环执行 2 次"
+    },
+    {
+     "key": "B",
+     "text": "循环是无限循环"
+    },
+    {
+     "key": "C",
+     "text": "循环体语句一次也不执行"
+    },
+    {
+     "key": "D",
+     "text": "循环体语句执行一次"
+    }
+   ],
+   "answer": "C",
+   "explain": "k=0 的值是 0（假），循环体一次也不执行，且 k 被改为 0。\n",
+   "answerText": "C",
+   "order": 30
+  },
+  {
+   "id": "13014-single-16",
+   "no": 16,
+   "type": "single",
+   "stem": "判断字符变量 c1 是否为数字字符的正确表达式为（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "'0'<=c1<='9'"
+    },
+    {
+     "key": "B",
+     "text": "(c1>='0')&&(c1<='9')"
+    },
+    {
+     "key": "C",
+     "text": "('0'>=c1)　('9'<=c1)"
+    },
+    {
+     "key": "D",
+     "text": "(c1>='0')　(c1<='9')"
+    }
+   ],
+   "answer": "B",
+   "explain": "C 不支持连写比较，'0'<=c1<='9' 会先算 '0'<=c1 得 0/1 再与 '9' 比较，恒为真。\n",
+   "note": "答案错误｜原答案标 A，但 A 是数学连写形式，在 C 中先算 '0'<=c1 得 0/1 再与 '9' 比较，恒为真（实跑 c1='A' 也得 1）；正确答案为 B。订正：答案改为 B；D 项原写成带 sizeof 的等价式，已改为恒真的“或”表达式，保证选项唯一。",
+   "answerText": "B",
+   "order": 31
+  },
+  {
+   "id": "13014-single-17",
+   "no": 17,
+   "type": "single",
+   "stem": "若有定义 int a=7; float x=2.5, y=4.7; 则表达式 x+a%3*(int)(x+y)%2/4 的值是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "2.500000"
+    },
+    {
+     "key": "B",
+     "text": "2.750000"
+    },
+    {
+     "key": "C",
+     "text": "3.500000"
+    },
+    {
+     "key": "D",
+     "text": "0.000000"
+    }
+   ],
+   "answer": "A",
+   "explain": "(int)(x+y)=7；a%3=1；1*7=7；7%2=1；1/4=0（整数除法）；x+0=2.5。\n",
+   "answerText": "A",
+   "order": 32
+  },
+  {
+   "id": "13014-single-18",
+   "no": 18,
+   "type": "single",
+   "stem": "一个 C 程序的执行是从（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "本程序的 main 函数开始，到 main 函数结束"
+    },
+    {
+     "key": "B",
+     "text": "本程序的第一个函数开始，到本程序文件的最后一个函数结束"
+    },
+    {
+     "key": "C",
+     "text": "本程序的 main 函数开始，到本程序文件的最后一个函数结束"
+    },
+    {
+     "key": "D",
+     "text": "本程序文件的第一个函数开始，到本程序 main 函数结束"
+    }
+   ],
+   "answer": "A",
+   "explain": "程序入口唯一为 main，退出 main 即程序结束（除非注册了 atexit 等）。\n",
+   "answerText": "A",
+   "order": 33
+  },
+  {
+   "id": "13014-single-19",
+   "no": 19,
+   "type": "single",
+   "stem": "下面四个选项中，均是不合法的用户标识符的选项是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ap_odo、a_b、_x2"
+    },
+    {
+     "key": "B",
+     "text": "float、lao_A、int_1"
+    },
+    {
+     "key": "C",
+     "text": "b-a、goto、int"
+    },
+    {
+     "key": "D",
+     "text": "_123、temp、INT"
+    }
+   ],
+   "answer": "C",
+   "explain": "b-a 含非法字符“-”，goto、int 是关键字，故 C 组三个均不合法；A、B、D 三组中至少各有合法标识符（如 Ap_odo、int_1、_123）。\n",
+   "note": "选项排版错乱｜原卷四个选项未按“组”对齐（如“A.Ap_odo B.float lao_A”实为两组标识符），A 组只剩一个标识符，无法判断“均不合法”。订正：按每组三个标识符重排，A 组补 a_b、_x2，B 组补 int_1。",
+   "answerText": "C",
+   "order": 34
+  },
+  {
+   "id": "13014-single-20",
+   "no": 20,
+   "type": "single",
+   "stem": "以下叙述正确的是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "在 C 程序中，main 函数必须位于程序的最前面"
+    },
+    {
+     "key": "B",
+     "text": "C 程序每行中只能写一条语句"
+    },
+    {
+     "key": "C",
+     "text": "C 语言本身没有输入输出语句"
+    },
+    {
+     "key": "D",
+     "text": "在对一个 C 程序进行编译的过程中，可发现注释中的拼写错误"
+    }
+   ],
+   "answer": "C",
+   "explain": "输入输出由库函数（printf/scanf）提供，不属语言本身的语句；注释在预处理阶段被删除，编译不检查其内容。\n",
+   "answerText": "C",
+   "order": 35
+  },
+  {
+   "id": "13014-single-21",
+   "no": 21,
+   "type": "single",
+   "stem": "以下叙述不正确的是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "逗号运算符的运算等级最低"
+    },
+    {
+     "key": "B",
+     "text": "ABC 和 abc 是两个不同的变量"
+    },
+    {
+     "key": "C",
+     "text": "若 a 和 b 类型相同，在执行 a=b; 后，b 的自身值不变"
+    },
+    {
+     "key": "D",
+     "text": "'a'和\"a\"是完全等价的常量"
+    }
+   ],
+   "answer": "D",
+   "explain": "'a' 是字符常量（1 字节，值为 97），\"a\" 是字符串常量（2 字节，含 '\\0'），二者不等价。\n",
+   "answerText": "D",
+   "order": 36
+  },
+  {
+   "id": "13014-single-22",
+   "no": 22,
+   "type": "single",
+   "stem": "int x=3, y=2; 则表达式 x+=x*=y+8 的值为（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "28"
+    },
+    {
+     "key": "B",
+     "text": "30"
+    },
+    {
+     "key": "C",
+     "text": "60"
+    },
+    {
+     "key": "D",
+     "text": "17"
+    }
+   ],
+   "answer": "C",
+   "explain": "赋值运算符右结合，从右往左算：y+8=10；x*=10 使 x=3×10=30；再 x+=30 使 x=30+30=60。（严格说在同一表达式内两次修改 x 属未定义行为，考试按教材的右结合求值顺序作答，gcc 实测为 60。）\n",
+   "note": "题干录入错误｜原卷 docx 把表达式误录为“x-=x=y*8”——按该式只能得到 0，而四个选项均不含 0，自相矛盾。实际考题为“x+=x*=y+8”，计算得 60，与原答案 C 一致。订正：恢复正确表达式，答案仍为 C（60）。",
+   "answerText": "C",
+   "order": 37
+  },
+  {
+   "id": "13014-single-23",
+   "no": 23,
+   "type": "single",
+   "stem": "以下语句或语句组中，能正确进行字符串赋值的是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "char *sp; *sp=\"right!\";"
+    },
+    {
+     "key": "B",
+     "text": "char s[10]; s=\"right!\";"
+    },
+    {
+     "key": "C",
+     "text": "char s[10]; *s=\"right!\";"
+    },
+    {
+     "key": "D",
+     "text": "char *sp=\"right!\";"
+    }
+   ],
+   "answer": "D",
+   "explain": "D 让指针指向字符串常量首地址，正确；A、C 是向未初始化/非法指针写入，B 是数组整体赋值。实机验证（gcc）：A 能编译通过，但运行时向野指针所指地址写入，属未定义行为，输出为随机值，故 A 不能选。\n",
+   "answerText": "D",
+   "order": 38
+  },
+  {
+   "id": "13014-single-24",
+   "no": 24,
+   "type": "single",
+   "stem": "C 语言规定 else 总是与（ ）配对。",
+   "options": [
+    {
+     "key": "A",
+     "text": "缩进位置相同的 if"
+    },
+    {
+     "key": "B",
+     "text": "同一行上的 if"
+    },
+    {
+     "key": "C",
+     "text": "其之前最近的 if"
+    },
+    {
+     "key": "D",
+     "text": "其之后最近的 if"
+    }
+   ],
+   "answer": "C",
+   "explain": "else 遵循“就近配对”规则，与之前最近的、未配对的 if 结合。\n",
+   "answerText": "C",
+   "order": 39
+  },
+  {
+   "id": "13014-single-25",
+   "no": 25,
+   "type": "single",
+   "stem": "在 C 语言中，变量的隐含存储类别是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "auto"
+    },
+    {
+     "key": "B",
+     "text": "static"
+    },
+    {
+     "key": "C",
+     "text": "extern"
+    },
+    {
+     "key": "D",
+     "text": "无存储类别"
+    }
+   ],
+   "answer": "A",
+   "explain": "函数内定义的变量默认 auto（自动变量），存于栈区、随函数返回释放。\n",
+   "answerText": "A",
+   "order": 40
+  },
+  {
+   "id": "13014-single-26",
+   "no": 26,
+   "type": "single",
+   "stem": "执行下面两个语句后，输出的结果为（ ）。char c1=98; printf(\"%d %c\", c1, c1-32);",
+   "options": [
+    {
+     "key": "A",
+     "text": "97 66"
+    },
+    {
+     "key": "B",
+     "text": "98 b"
+    },
+    {
+     "key": "C",
+     "text": "b 66"
+    },
+    {
+     "key": "D",
+     "text": "98 B"
+    }
+   ],
+   "answer": "D",
+   "explain": "c1=98 即 'b'；%d 输出 98，%c 输出 98-32=66 即 'B'。\n",
+   "answerText": "D",
+   "order": 41
+  },
+  {
+   "id": "13014-single-27",
+   "no": 27,
+   "type": "single",
+   "stem": "char w; int x; float y; double z; 则表达式 w*x+z-y 值的数据类型是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "double"
+    },
+    {
+     "key": "B",
+     "text": "char"
+    },
+    {
+     "key": "C",
+     "text": "int"
+    },
+    {
+     "key": "D",
+     "text": "float"
+    }
+   ],
+   "answer": "A",
+   "explain": "按“向精度高者转换”，char→int，与 float、double 运算后整体提升为 double。\n",
+   "answerText": "A",
+   "order": 42
+  },
+  {
+   "id": "13014-single-28",
+   "no": 28,
+   "type": "single",
+   "stem": "C 语言中要求操作数必须是整数的运算符是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "/"
+    },
+    {
+     "key": "B",
+     "text": "%"
+    },
+    {
+     "key": "C",
+     "text": "!"
+    },
+    {
+     "key": "D",
+     "text": "="
+    }
+   ],
+   "answer": "B",
+   "explain": "% 只对整型操作数有效；/ 对整型、实型均可（整型为整除）。\n",
+   "answerText": "B",
+   "order": 43
+  },
+  {
+   "id": "13014-single-29",
+   "no": 29,
+   "type": "single",
+   "stem": "用 scanf(\"%d, %d\", &a, &b) 输入数据时，下面输入法中正确的是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "123, 4"
+    },
+    {
+     "key": "B",
+     "text": "123 4"
+    },
+    {
+     "key": "C",
+     "text": "123; 4"
+    },
+    {
+     "key": "D",
+     "text": "1234"
+    }
+   ],
+   "answer": "A",
+   "explain": "格式串中的普通字符（逗号）必须原样输入，故两个数之间要有逗号。\n",
+   "answerText": "A",
+   "order": 44
+  },
+  {
+   "id": "13014-single-30",
+   "no": 30,
+   "type": "single",
+   "stem": "执行下列程序段后，正确的结果是（ ）。int k,a[3][3]={1,2,3,4,5,6,7,8,9}; for(k=0;k<3;k++) printf(\"%2d\",a[k][k]);",
+   "options": [
+    {
+     "key": "A",
+     "text": "1 2 3"
+    },
+    {
+     "key": "B",
+     "text": "1 5 9"
+    },
+    {
+     "key": "C",
+     "text": "1 4 7"
+    },
+    {
+     "key": "D",
+     "text": "3 6 9"
+    }
+   ],
+   "answer": "B",
+   "explain": "a[0][0]、a[1][1]、a[2][2] 即主对角线元素 1、5、9。\n",
+   "answerText": "B",
+   "order": 45
+  },
+  {
+   "id": "13014-single-31",
+   "no": 31,
+   "type": "single",
+   "stem": "若 a 是 int 类型变量，则计算表达式 a=25/3%3 的值是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "3"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "1"
+    },
+    {
+     "key": "D",
+     "text": "0"
+    }
+   ],
+   "answer": "B",
+   "explain": "25/3=8（整除），8%3=2；优先级上 *、/、% 同级自左向右。\n",
+   "answerText": "B",
+   "order": 46
+  },
+  {
+   "id": "13014-single-32",
+   "no": 32,
+   "type": "single",
+   "stem": "下面正确的字符常量是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "\"c\""
+    },
+    {
+     "key": "B",
+     "text": "'\\'"
+    },
+    {
+     "key": "C",
+     "text": "'W'"
+    },
+    {
+     "key": "D",
+     "text": "''"
+    }
+   ],
+   "answer": "C",
+   "explain": "字符常量用单引号括起单个字符；A 是字符串，B 中反斜杠须转义为 '\\\\'，D 为空字符常量（非法）。\n",
+   "answerText": "C",
+   "order": 47
+  },
+  {
+   "id": "13014-single-33",
+   "no": 33,
+   "type": "single",
+   "stem": "数字字符 0 的 ASCII 值为 48，若有以下程序，程序运行后的输出结果是（ ）。main(){char a='1',b='2';printf(\"%c,\",b++);printf(\"%d\\n\",b-a);}",
+   "options": [
+    {
+     "key": "A",
+     "text": "3,2"
+    },
+    {
+     "key": "B",
+     "text": "50,2"
+    },
+    {
+     "key": "C",
+     "text": "2,2"
+    },
+    {
+     "key": "D",
+     "text": "2,50"
+    }
+   ],
+   "answer": "C",
+   "explain": "b++ 先输出 '2' 再自增为 51；51-49=2，故输出“2,2”。\n",
+   "answerText": "C",
+   "order": 48
+  },
+  {
+   "id": "13014-single-34",
+   "no": 34,
+   "type": "single",
+   "stem": "以下程序的运行结果为（ ）。main(){int n; for(n=1;n<=10;n++){if(n%3==0)continue;printf(\"%d\",n);}}",
+   "options": [
+    {
+     "key": "A",
+     "text": "12457810"
+    },
+    {
+     "key": "B",
+     "text": "369"
+    },
+    {
+     "key": "C",
+     "text": "12"
+    },
+    {
+     "key": "D",
+     "text": "12345678910"
+    }
+   ],
+   "answer": "A",
+   "explain": "continue 跳过 3、6、9，其余原样输出，得到 12457810。\n",
+   "answerText": "A",
+   "order": 49
+  },
+  {
+   "id": "13014-single-35",
+   "no": 35,
+   "type": "single",
+   "stem": "设 x 和 y 均为 int 型变量，则语句 x+=y; y=x-y; x-=y; 的功能是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "把 x 和 y 按从大到小排列"
+    },
+    {
+     "key": "B",
+     "text": "把 x 和 y 按从小到大排列"
+    },
+    {
+     "key": "C",
+     "text": "无确定结果"
+    },
+    {
+     "key": "D",
+     "text": "交换 x 和 y 中的值"
+    }
+   ],
+   "answer": "D",
+   "explain": "设初值 x=a、y=b：x=a+b；y=(a+b)-b=a；x=(a+b)-a=b，完成交换（不借助临时变量）。\n",
+   "answerText": "D",
+   "order": 50
+  },
+  {
+   "id": "13014-single-36",
+   "no": 36,
+   "type": "single",
+   "stem": "变量的指针，其含义是指该变量的（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "值"
+    },
+    {
+     "key": "B",
+     "text": "地址"
+    },
+    {
+     "key": "C",
+     "text": "名"
+    },
+    {
+     "key": "D",
+     "text": "一个标志"
+    }
+   ],
+   "answer": "B",
+   "explain": "指针变量存放的是变量的地址，* 运算即通过地址访问其值。\n",
+   "answerText": "B",
+   "order": 51
+  },
+  {
+   "id": "13014-single-37",
+   "no": 37,
+   "type": "single",
+   "stem": "下面程序段的运行结果是（ ）。char c[5]={'a','b','\\0','c','\\0'}; printf(\"%s\",c);",
+   "options": [
+    {
+     "key": "A",
+     "text": "'a'、'b'"
+    },
+    {
+     "key": "B",
+     "text": "ab"
+    },
+    {
+     "key": "C",
+     "text": "ab c"
+    },
+    {
+     "key": "D",
+     "text": "abc"
+    }
+   ],
+   "answer": "B",
+   "explain": "%s 从首地址开始输出到第一个 '\\0' 为止，故只输出 ab。\n",
+   "note": "选项重复｜原卷 A 与 D 均为“ab”，四个选项无法区分。订正：A 改为“'a'、'b'”，C 改为“ab c”，D 改为“abc”。",
+   "answerText": "B",
+   "order": 52
+  },
+  {
+   "id": "13014-single-38",
+   "no": 38,
+   "type": "single",
+   "stem": "以下定义语句中，错误的是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "int a[]={1,2};"
+    },
+    {
+     "key": "B",
+     "text": "char *a[3];"
+    },
+    {
+     "key": "C",
+     "text": "char s[10]=\"text\";"
+    },
+    {
+     "key": "D",
+     "text": "int n=5,a[n];"
+    }
+   ],
+   "answer": "D",
+   "explain": "按 C89 口径（自考教材通用），数组长度必须是常量表达式，n 是变量，故 D 错误。实机验证：gcc 默认标准（C17）下该语句被当作变长数组（VLA）可以编译并运行，仅当它是全局/静态数组或需要初始化时才非法——应试时以教材的 C89 口径为准，选 D。\n",
+   "answerText": "D",
+   "order": 53
+  },
+  {
+   "id": "13014-single-39",
+   "no": 39,
+   "type": "single",
+   "stem": "for(i=0;i<10;i++) if(i>=5) break; 则循环结束后 i 的值为（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "0"
+    },
+    {
+     "key": "B",
+     "text": "1"
+    },
+    {
+     "key": "C",
+     "text": "5"
+    },
+    {
+     "key": "D",
+     "text": "10"
+    }
+   ],
+   "answer": "C",
+   "explain": "i 从 0 递增，i=5 时条件 i>=5 成立并执行 break，此时自增尚未发生，故 i 仍为 5。\n",
+   "note": "题干录入错误｜原卷 docx 把条件录成“i<=5”：按该式 i=0 第一次判断即成立并 break，结果为 0，与四个选项（含原答案 C=5）全都对不上。实际考题为“i>=5”，答案 C（5）正确。订正：恢复条件 i>=5，答案仍为 C。",
+   "answerText": "C",
+   "order": 54
+  },
+  {
+   "id": "13014-single-40",
+   "no": 40,
+   "type": "single",
+   "stem": "fopen 函数不正确的用法是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "fopen(\"C:\\\\mydata\",\"rb\")"
+    },
+    {
+     "key": "B",
+     "text": "fopen(\"C:\\\\mydata\",\"w+\")"
+    },
+    {
+     "key": "C",
+     "text": "fopen(\"C:\\\\mydata\",\"r\")"
+    },
+    {
+     "key": "D",
+     "text": "fopen(\"C:\\\\mydata\",\"rw\")"
+    }
+   ],
+   "answer": "D",
+   "explain": "打开模式只能取 r/w/a 与 b/+ 的组合，\"rw\" 不是合法模式串。\n",
+   "note": "选项雷同｜原卷四个选项的路径与转义完全相同（均写作 \"C:\\mydata\"，其中 \\m 为非法转义），仅模式不同，而 r、rb、w+、a+ 都是合法模式，无一“不正确”。订正：D 项模式改为 \"rw\"（非法），并修正路径转义为 \\\\mydata。",
+   "answerText": "D",
+   "order": 55
+  },
+  {
+   "id": "13014-single-41",
+   "no": 41,
+   "type": "single",
+   "stem": "int *p[4] 定义的类型是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "整型指针的数组"
+    },
+    {
+     "key": "B",
+     "text": "指向数组的指针"
+    },
+    {
+     "key": "C",
+     "text": "整型指针"
+    },
+    {
+     "key": "D",
+     "text": "函数调用，参数为 4，返回类型为整数指针"
+    }
+   ],
+   "answer": "A",
+   "explain": "[] 优先级高于 *，故 p 是含 4 个元素的数组，每个元素是 int*。\n",
+   "answerText": "A",
+   "order": 56
+  },
+  {
+   "id": "13014-single-42",
+   "no": 42,
+   "type": "single",
+   "stem": "C 语言规定，函数返回值的类型由（ ）所决定。",
+   "options": [
+    {
+     "key": "A",
+     "text": "return 语句中的表达式类型"
+    },
+    {
+     "key": "B",
+     "text": "调用该函数时的主调函数类型"
+    },
+    {
+     "key": "C",
+     "text": "调用该函数时的形参类型"
+    },
+    {
+     "key": "D",
+     "text": "在定义该函数时所指定的函数类型"
+    }
+   ],
+   "answer": "D",
+   "explain": "返回值按函数定义时的类型转换；return 表达式的类型只影响隐式转换。\n",
+   "answerText": "D",
+   "order": 57
+  },
+  {
+   "id": "13014-single-43",
+   "no": 43,
+   "type": "single",
+   "stem": "以下关于 do-while 循环的不正确描述是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "do-while 的循环体至少执行一次"
+    },
+    {
+     "key": "B",
+     "text": "do-while 循环由 do 开始，用 while 结束，在 while(表达式)后面不能写分号"
+    },
+    {
+     "key": "C",
+     "text": "在 do-while 循环体中，一定要有能使 while 后面表达式的值变为零（“假”）的操作"
+    },
+    {
+     "key": "D",
+     "text": "do-while 的循环体可以是复合语句"
+    }
+   ],
+   "answer": "B",
+   "explain": "do-while 的 while(表达式) 后面必须写分号，B 说“不能写分号”是错的。\n",
+   "answerText": "B",
+   "order": 58
+  },
+  {
+   "id": "13014-single-44",
+   "no": 44,
+   "type": "single",
+   "stem": "若 a=4, b=3，则条件表达式 a<b? a:b+1 的值为（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "-4"
+    },
+    {
+     "key": "B",
+     "text": "-3"
+    },
+    {
+     "key": "C",
+     "text": "3"
+    },
+    {
+     "key": "D",
+     "text": "4"
+    }
+   ],
+   "answer": "D",
+   "explain": "a<b 为假，取 b+1=4；注意条件运算符优先级低于 +，故为 a<b ? a : (b+1)。\n",
+   "answerText": "D",
+   "order": 59
+  },
+  {
+   "id": "13014-single-45",
+   "no": 45,
+   "type": "single",
+   "stem": "已知 int n=1, i=1, j=2; 执行语句 n=i<j?i++:j++; 则 i 和 j 的值是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,2"
+    },
+    {
+     "key": "B",
+     "text": "1,3"
+    },
+    {
+     "key": "C",
+     "text": "1,2"
+    },
+    {
+     "key": "D",
+     "text": "2,3"
+    }
+   ],
+   "answer": "A",
+   "explain": "i<j 为真，只执行 i++，故 i=2、j 不变仍为 2。\n",
+   "note": "答案错误｜原答案标 D（2,3），但条件为真时 j++ 不执行，j 应保持 2。订正：答案改为 A。",
+   "answerText": "A",
+   "order": 60
+  },
+  {
+   "id": "13014-single-46",
+   "no": 46,
+   "type": "single",
+   "stem": "C 语言中 while 和 do-while 循环的主要区别（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "do-while 的循环体至少执行一次"
+    },
+    {
+     "key": "B",
+     "text": "while 的循环控制条件比 do-while 的循环控制条件严格"
+    },
+    {
+     "key": "C",
+     "text": "do-while 允许从外部转到循环体内"
+    },
+    {
+     "key": "D",
+     "text": "do-while 的循环体不能是复合语句"
+    }
+   ],
+   "answer": "A",
+   "explain": "while 先判断后执行（可能一次都不执行），do-while 先执行后判断（至少一次）。\n",
+   "answerText": "A",
+   "order": 61
+  },
+  {
+   "id": "13014-single-47",
+   "no": 47,
+   "type": "single",
+   "stem": "以下对二维数组的正确说明的语句是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "int a[3][]"
+    },
+    {
+     "key": "B",
+     "text": "float a(3,4)"
+    },
+    {
+     "key": "C",
+     "text": "double a[3][4]"
+    },
+    {
+     "key": "D",
+     "text": "float a(3)(4)"
+    }
+   ],
+   "answer": "C",
+   "explain": "二维数组用两对方括号，且第二维长度不能省略。\n",
+   "answerText": "C",
+   "order": 62
+  },
+  {
+   "id": "13014-single-48",
+   "no": 48,
+   "type": "single",
+   "stem": "以下关于 switch 语句和 break 语句的描述中，只有（ ）是正确的。",
+   "options": [
+    {
+     "key": "A",
+     "text": "在 switch 语句中必须使用 break 语句"
+    },
+    {
+     "key": "B",
+     "text": "在 switch 语句中，可以根据需要使用或不使用 break 语句"
+    },
+    {
+     "key": "C",
+     "text": "break 语句只能用于 switch 语句中"
+    },
+    {
+     "key": "D",
+     "text": "break 语句是 switch 语句的一部分"
+    }
+   ],
+   "answer": "B",
+   "explain": "不写 break 会发生“穿透”（继续执行后续 case）；break 也可用于循环。\n",
+   "answerText": "B",
+   "order": 63
+  },
+  {
+   "id": "13014-single-49",
+   "no": 49,
+   "type": "single",
+   "stem": "以下程序的输出结果是（ ）。main(){int x=023; printf(\"%d\\n\",--x);}",
+   "options": [
+    {
+     "key": "A",
+     "text": "18"
+    },
+    {
+     "key": "B",
+     "text": "22"
+    },
+    {
+     "key": "C",
+     "text": "23"
+    },
+    {
+     "key": "D",
+     "text": "19"
+    }
+   ],
+   "answer": "A",
+   "explain": "023 是八进制数（十进制 19），先自减再输出，得 18。\n",
+   "answerText": "A",
+   "order": 64
+  },
+  {
+   "id": "13014-single-50",
+   "no": 50,
+   "type": "single",
+   "stem": "为了判断两个字符串 s1 和 s2 相等，应当使用（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "if(s1==s2)"
+    },
+    {
+     "key": "B",
+     "text": "if(s1=s2)"
+    },
+    {
+     "key": "C",
+     "text": "if(strcmp(s1,s2))"
+    },
+    {
+     "key": "D",
+     "text": "if(strcmp(s1,s2)==0)"
+    }
+   ],
+   "answer": "D",
+   "explain": "== 比较的是地址；strcmp 返回 0 表示内容相同。\n",
+   "answerText": "D",
+   "order": 65
+  },
+  {
+   "id": "13014-single-51",
+   "no": 51,
+   "type": "single",
+   "stem": "若有说明：int a[10]; 则对 a 数组元素的正确引用是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "a[10]"
+    },
+    {
+     "key": "B",
+     "text": "a[6-6]"
+    },
+    {
+     "key": "C",
+     "text": "a[3.6]"
+    },
+    {
+     "key": "D",
+     "text": "a[-1]"
+    }
+   ],
+   "answer": "B",
+   "explain": "下标须为整型常量表达式且范围 0～9；a[6-6] 即 a[0]。实机验证（gcc）：a[10]、a[-1] 都能编译通过（越界属未定义行为，编译器不报错），a[3.6] 则直接编译报错（下标不是整型），故“正确引用”只有 B。\n",
+   "answerText": "B",
+   "order": 66
+  },
+  {
+   "id": "13014-single-52",
+   "no": 52,
+   "type": "single",
+   "stem": "以下正确的函数形式是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "double fun(int x,int y){z=x+y;return z;}"
+    },
+    {
+     "key": "B",
+     "text": "fun(int x,int y){int z;return z;}"
+    },
+    {
+     "key": "C",
+     "text": "fun(x,y){int x,y;double z;z=x+y;return z;}"
+    },
+    {
+     "key": "D",
+     "text": "double fun(int x,int y){double z;z=x+y;return z;}"
+    }
+   ],
+   "answer": "D",
+   "explain": "B 错在形参 y 没有类型（C 要求形参逐一给出类型）且缺返回类型；A、C 的问题分别是局部变量 z 未声明、形参在函数体内才声明；只有 D 的类型、形参与局部变量都完整。\n",
+   "answerText": "D",
+   "order": 67
+  },
+  {
+   "id": "13014-single-53",
+   "no": 53,
+   "type": "single",
+   "stem": "设有定义：struct sk{int a;float b;}data,*p; 若有 p=&data; 则对 data 中的 a 域的正确引用是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "(*p).data.a"
+    },
+    {
+     "key": "B",
+     "text": "(*p).a"
+    },
+    {
+     "key": "C",
+     "text": "p->data.a"
+    },
+    {
+     "key": "D",
+     "text": "p.data.a"
+    }
+   ],
+   "answer": "B",
+   "explain": "p 指向结构变量，(*p).a 或 p->a 均可；A、C、D 均多写了一层成员名。\n",
+   "answerText": "B",
+   "order": 68
+  },
+  {
+   "id": "13014-single-54",
+   "no": 54,
+   "type": "single",
+   "stem": "能正确表示“当 x 取值在[1,10]和[200,210]范围内为真，否则为假”的表达式是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "(x>=1)&&(x<=10)&&(x>=200)&&(x<=210)"
+    },
+    {
+     "key": "B",
+     "text": "(x>=1)&&(x<=10)　(x>=200)&&(x<=210)"
+    },
+    {
+     "key": "C",
+     "text": "(x>=1)　(x<=10)　(x>=200)　(x<=210)"
+    },
+    {
+     "key": "D",
+     "text": "(x>=1)&&(x<=10)　(x>=200)　(x<=210)"
+    }
+   ],
+   "answer": "B",
+   "explain": "两个区间为“或”关系，区间内部为“与”关系；&& 优先级高于 ||，故 B 无需加括号即成立。\n",
+   "answerText": "B",
+   "order": 69
+  },
+  {
+   "id": "13014-single-55",
+   "no": 55,
+   "type": "single",
+   "stem": "假如指针 p 已经指向变量 x，则 *&p 相当于（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "x"
+    },
+    {
+     "key": "B",
+     "text": "*p"
+    },
+    {
+     "key": "C",
+     "text": "&x"
+    },
+    {
+     "key": "D",
+     "text": "p"
+    }
+   ],
+   "answer": "C",
+   "explain": "&p 是 p 自身的地址，*&p 又取回 p 的值，而 p 指向 x，故 *&p 即 &x。\n",
+   "note": "答案错误｜原答案标 A（x）。*&p＝p＝&x，与 x 相差一次解引用，A 混淆了 p 与 *p。订正：答案改为 C。",
+   "answerText": "C",
+   "order": 70
+  },
+  {
+   "id": "13014-single-56",
+   "no": 56,
+   "type": "single",
+   "stem": "以下错误的描述是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "break 语句不能用于循环语句和 switch 语句外的任何其他语句"
+    },
+    {
+     "key": "B",
+     "text": "在 switch 语句中使用 break 语句或 continue 语句的作用相同"
+    },
+    {
+     "key": "C",
+     "text": "在循环语句中使用 continue 语句是为了结束本次循环，而不是终止整个循环"
+    },
+    {
+     "key": "D",
+     "text": "在循环语句中使用 break 语句是为了使流程跳出循环体，提前结束循环"
+    }
+   ],
+   "answer": "B",
+   "explain": "switch 中不能使用 continue（只能在循环内），二者作用不同，故 B 错误。\n",
+   "answerText": "B",
+   "order": 71
+  },
+  {
+   "id": "13014-single-57",
+   "no": 57,
+   "type": "single",
+   "stem": "设 int *p, i; 以下正确的语句是（ ）。",
+   "options": [
+    {
+     "key": "A",
+     "text": "*p=10;"
+    },
+    {
+     "key": "B",
+     "text": "i=p;"
+    },
+    {
+     "key": "C",
+     "text": "i=*p;"
+    },
+    {
+     "key": "D",
+     "text": "p=2*p+1;"
+    }
+   ],
+   "answer": "C",
+   "explain": "p 未初始化时 *p=10 属野指针写入（危险且不合法）；i=*p 取 p 所指的值赋给 i，类型正确。\n",
+   "answerText": "C",
+   "order": 72
+  },
+  {
+   "id": "13014-single-58",
+   "no": 58,
+   "type": "single",
+   "stem": "设有数组定义：char str[]=\"China\"; 则下面的输出为（ ）。printf(\"%d\", strlen(str));",
+   "options": [
+    {
+     "key": "A",
+     "text": "4"
+    },
+    {
+     "key": "B",
+     "text": "6"
+    },
+    {
+     "key": "C",
+     "text": "5"
+    },
+    {
+     "key": "D",
+     "text": "7"
+    }
+   ],
+   "answer": "C",
+   "explain": "strlen 不计结束符 '\\0'，故长度为 5；sizeof(str) 才是 6。\n",
+   "answerText": "C",
+   "order": 73
+  },
+  {
+   "id": "13014-judge-1",
+   "no": 1,
+   "type": "judge",
+   "stem": "C 语言规定，标识符中的字母一般区分大、小写。",
+   "answer": true,
+   "explain": "C 是大小写敏感的语言，Abc 与 abc 是两个不同的标识符。\n",
+   "answerText": "对",
+   "order": 74
+  },
+  {
+   "id": "13014-judge-2",
+   "no": 2,
+   "type": "judge",
+   "stem": "控制台标准输入设备一般是指键盘。",
+   "answer": true,
+   "explain": "标准输入 stdin 默认连接键盘，标准输出 stdout 默认连接显示器。\n",
+   "answerText": "对",
+   "order": 75
+  },
+  {
+   "id": "13014-judge-3",
+   "no": 3,
+   "type": "judge",
+   "stem": "使用 while 和 do-while 循环时，循环变量初始化的操作应在循环语句之前处理。",
+   "answer": true,
+   "explain": "两种循环都不在语句内部初始化循环变量，须在进入循环前赋值。\n",
+   "answerText": "对",
+   "order": 76
+  },
+  {
+   "id": "13014-judge-4",
+   "no": 4,
+   "type": "judge",
+   "stem": "循环体中 continue 语句的作用是结束整个循环的执行。",
+   "answer": false,
+   "explain": "continue 只结束“本次”循环，break 才结束整个循环。\n",
+   "answerText": "错",
+   "order": 77
+  },
+  {
+   "id": "13014-judge-5",
+   "no": 5,
+   "type": "judge",
+   "stem": "关系表达式的值是 0 或 1。",
+   "answer": true,
+   "explain": "C 中关系运算结果为 int 型的 0（假）或 1（真）。\n",
+   "answerText": "对",
+   "order": 78
+  },
+  {
+   "id": "13014-judge-6",
+   "no": 6,
+   "type": "judge",
+   "stem": "若有说明 int a[3][4]={0}; 则只有元素 a[0][0] 可得到初值 0。",
+   "answer": false,
+   "explain": "部分初始化时其余元素自动补 0，故 12 个元素全部为 0。\n",
+   "note": "答案错误｜原答案标“对”，与 C 语言的初始化规则相反。订正：答案改为“错”。",
+   "answerText": "错",
+   "order": 79
+  },
+  {
+   "id": "13014-judge-7",
+   "no": 7,
+   "type": "judge",
+   "stem": "字符串作为一维数组存放在内存中。",
+   "answer": true,
+   "explain": "C 用字符数组（一维）存放字符串，并以 '\\0' 结尾。\n",
+   "answerText": "对",
+   "order": 80
+  },
+  {
+   "id": "13014-judge-8",
+   "no": 8,
+   "type": "judge",
+   "stem": "字符数组中的一个元素存放一个字符。",
+   "answer": true,
+   "explain": "字符数组元素类型为 char，每个元素恰好一个字节字符。\n",
+   "answerText": "对",
+   "order": 81
+  },
+  {
+   "id": "13014-judge-9",
+   "no": 9,
+   "type": "judge",
+   "stem": "字符数组中的最后一个字符必须是 '\\0'。",
+   "answer": false,
+   "explain": "只有“字符串”才要求以 '\\0' 结尾；字符数组可以存放任意字符序列，不要求结尾符。\n",
+   "answerText": "错",
+   "order": 82
+  },
+  {
+   "id": "13014-judge-10",
+   "no": 10,
+   "type": "judge",
+   "stem": "形参为指针变量时，实参必须是数组名。",
+   "answer": false,
+   "explain": "实参可以是数组名、指针变量或变量的地址（&x），只要类型匹配即可。",
+   "answerText": "错",
+   "order": 83
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "version": 1,
+ "generatedAt": "2026-11-20T12:33:31+00:00",
+ "source": "四科模拟试卷_纠错解析与挖空版",
+ "subjects": [
+  {
+   "code": "13006",
+   "name": "软件工程（实践）",
+   "short": "软工",
+   "file": "13006.json",
+   "counts": {
+    "fill": 16,
+    "single": 30,
+    "judge": 18
+   },
+   "total": 64
+  },
+  {
+   "code": "13007",
+   "name": "编译原理",
+   "short": "编译",
+   "file": "13007.json",
+   "counts": {
+    "fill": 27,
+    "single": 26,
+    "judge": 24
+   },
+   "total": 77
+  },
+  {
+   "code": "13008",
+   "name": "软件质量保证与测试",
+   "short": "软质保",
+   "file": "13008.json",
+   "counts": {
+    "fill": 15,
+    "single": 39,
+    "judge": 18
+   },
+   "total": 72
+  },
+  {
+   "code": "13014",
+   "name": "高级语言程序设计（实践）",
+   "short": "高级语言",
+   "file": "13014.json",
+   "counts": {
+    "fill": 15,
+    "single": 58,
+    "judge": 10
+   },
+   "total": 83
+  }
+ ],
+ "total": 296
+}
